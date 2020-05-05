@@ -1,7 +1,6 @@
 export function speak(message: string) {
-    const vozBrasileira = window.speechSynthesis.getVoices()[16];
     const msg = new SpeechSynthesisUtterance(message)
-    msg.voice = vozBrasileira;
+    msg.lang = 'pt-br';
     window.speechSynthesis.speak(msg);
 }
 
